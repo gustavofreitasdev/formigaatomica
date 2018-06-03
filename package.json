@@ -1,0 +1,26 @@
+{
+  "name": "formiga-atomica",
+  "version": "1.0.0",
+  "description": "Projeto da matéria de Inteligência Artificial do professor Rigo (UFES/CEUNES). Primeira etapa, onde será implementado uma interface web para visualização e testes do Algoritmo de Colônias de Formigas.",
+  "main": "server.js",
+  "scripts": {
+    "test": "testes"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavofreitasdev/formigaatomica.git"
+  },
+  "keywords": [
+    "javascript",
+    "colonia-de-formigas",
+    "inteligencia-artificial",
+    "ufes",
+    "ceunes"
+  ],
+  "author": "Gustavo F Silva",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gustavofreitasdev/formigaatomica/issues"
+  },
+  "homepage": "https://github.com/gustavofreitasdev/formigaatomica#readme"
+}
