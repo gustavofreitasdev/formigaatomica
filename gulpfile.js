@@ -31,7 +31,7 @@ gulp.task('dist-js', function(){
 });
 /* Tarefa que verifica e compila se houve alguma modificações nos arquivos JS */
 gulp.task('js-watch', function(){
-    gulp.watch('dev/js/*', ['dist-js']);
+    gulp.watch('./dev/js/*', ['dist-js']);
 });
 
 /* Tarefa que mimifica e move arquivos CSS para o deploy */ 
@@ -44,7 +44,7 @@ gulp.task('dist-css', function(){
 });
 /* Tarefa que verifica e toma uma ação caso houver alguma mudança nos arquivos CSS */
 gulp.task('css-watch', function(){
-    gulp.watch('/dev/css/*', ['dist-css']);
+    gulp.watch('./dev/css/*', ['dist-css']);
 });
 
 
