@@ -20,8 +20,14 @@ gulp.task('pug-watch', function(){
 
 /* Tarefa para compilar ou mover todas as dependências JS nescessárias */
 gulp.task('dist-js', function(){
-    // Move a API Cytoscape para a área de deploy
-    gulp.src(['./node_modules/cytoscape/dist/cytoscape.min.js', './node_modules/bootstrap/dist/js/bootstrap.min.js'])
+    // Move a API Cytoscape, e algumas bibliotêcas nescessárias para a área de deploy
+    gulp.src(
+            [
+                './node_modules/cytoscape/dist/cytoscape.min.js', 
+                './node_modules/bootstrap/dist/js/bootstrap.min.js', 
+                './node_modules/jquery/dist/jquery.min.js'
+            ]
+        )
         .pipe(gulp.dest('./dist/js'));
     // Move, mimifica e renomeia os arquivos JS de desenvolvimento para a área de deploy 
     gulp.src('./dev/js/*.js')
