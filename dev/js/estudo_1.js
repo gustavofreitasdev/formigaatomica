@@ -10,8 +10,8 @@ cytoscape({
 
 
       data: { // element data (put json serialisable dev data here)
-        id: 'n1', // mandatory (string or number) id for each element, assigned automatically on undefined
-        parent: 'nparent', // indicates the compound node parent id; not defined => no parent
+        id: 'no1', // mandatory (string or number) id for each element, assigned automatically on undefined
+        parent: 'grupo1', // indicates the compound node parent id; not defined => no parent
       },
 
       // scratchpad data (usually temp or nonserialisable data)
@@ -37,7 +37,7 @@ cytoscape({
 
     { // node n2
       data: {
-        id: 'n2'
+        id: 'no2'
       },
       renderedPosition: {
         x: 200,
@@ -47,8 +47,8 @@ cytoscape({
 
     { // node n3
       data: {
-        id: 'n3',
-        parent: 'nparent'
+        id: 'no3',
+        parent: 'grupo1'
       },
       position: {
         x: 123,
@@ -58,7 +58,7 @@ cytoscape({
 
     { // node nparent
       data: {
-        id: 'nparent',
+        id: 'grupo1',
         position: {
           x: 200,
           y: 100
@@ -68,10 +68,10 @@ cytoscape({
 
     { // edge e1
       data: {
-        id: 'e1',
+        id: 'aresta1',
         // inferred as an edge because `source` and `target` are specified:
-        source: 'n1', // the source node id (edge comes from this node)
-        target: 'n2' // the target node id (edge goes to this node)
+        source: 'no1', // the source node id (edge comes from this node)
+        target: 'no2' // the target node id (edge goes to this node)
       }
     }
   ],
