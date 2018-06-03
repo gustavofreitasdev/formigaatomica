@@ -21,7 +21,7 @@ gulp.task('pug-watch', function(){
 /* Tarefa para compilar ou mover todas as dependências JS nescessárias */
 gulp.task('dist-js', function(){
     // Move a API Cytoscape para a área de deploy
-    gulp.src('./node_modules/cytoscape/dist/cytoscape.min.js')
+    gulp.src(['./node_modules/cytoscape/dist/cytoscape.min.js', './node_modules/bootstrap/dist/js/bootstrap.min.js'])
         .pipe(gulp.dest('./dist/js'));
     // Move, mimifica e renomeia os arquivos JS de desenvolvimento para a área de deploy 
     gulp.src('./dev/js/*.js')
@@ -36,10 +36,14 @@ gulp.task('js-watch', function(){
 
 /* Tarefa que mimifica e move arquivos CSS para o deploy */ 
 gulp.task('dist-css', function(){
-    gulp.src('./dev/css/*.css')
+    // Mimificando, renomeando e movendo arquivos CSS adicionais
+    gulp.src(['./dev/css/*.css'])
         .pipe(concat('style.css'))
         .pipe(uglifycss())
         .pipe(rename({ extname: '.min.css' }))
+        .pipe(gulp.dest('./dist/css'));
+    // Movendo arquivos CSS das bibliotêcas nescessárias
+    gulp.src('./node_modules/bootstrap/dist/css/bootstrap.min.css')
         .pipe(gulp.dest('./dist/css'));
 });
 /* Tarefa que verifica e toma uma ação caso houver alguma mudança nos arquivos CSS */
